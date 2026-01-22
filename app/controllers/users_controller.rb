@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     if @user.save
       log_in(@user)
       UserMailer.registration_completed(@user).deliver_later
-      redirect_to user_path(@user.id), notice: 'アカウントを登録しました。'
+      redirect_to user_path(@user.id), notice: 'アYour account has been registered.'
     else
       render :new
     end
